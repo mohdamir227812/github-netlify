@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 bg-light" >
+             <table border="2">
+                 <tr>
+                     <th>postId</th>
+                     <th>id</th>
+                     <th>name</th>
+                     <th>email</th>
+                     <th>body</th>
+                 </tr>
+                 <tr *ngFor="let object of objectname; index as i">
+                   
+                    <td>{{object.postId}}</td>
+                    <td>{{object.id}}</td>
+                    <td>{{object.name}}</td>
+                    <td>{{object.email}}  </td>
+                    <td>{{object.body}}</td>
+                    <th ><button (click)="deletedata(i)">delete</button></th>
+                 </tr>
+                
+             </table>
+        </div>
+    </div>
+</div>

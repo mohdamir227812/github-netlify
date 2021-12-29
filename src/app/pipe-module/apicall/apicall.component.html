@@ -1,0 +1,29 @@
+
+<div class="container">
+    <div class="form-group">
+        <input type="text" placeholder="search name" class="form-control" id="inputs" [(ngModel)]="namesearch">
+    </div>
+    <div class="row">
+        <div class="col-md-12 bg-light">
+            <table>
+                <tr>
+                    <th>postId</th>
+                    <th> id</th>
+                    <th>name</th>
+                    <th>email</th>
+                    <th>body</th>
+                </tr>
+                <tr *ngFor="let per of person | filterP:namesearch">
+                    <td>{{per.postId}}</td>
+                    <td>{{per.id}}</td>
+                    <td>{{per.name}}</td>
+                    
+                    <td>{{per.email}}</td>
+                    <td>{{per.body}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+
